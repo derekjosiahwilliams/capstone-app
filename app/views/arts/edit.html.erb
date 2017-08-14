@@ -1,0 +1,7 @@
+<%= form_for @art, html: users_path, html: { multipart: true } do |form| %>
+  <%= form.file_field :avatar %>
+<% end %>
+
+<%= simple_form_for @user, url: users_path do |form| %>
+  <%= form.input :avatar, as: :file %>
+<% end %>
