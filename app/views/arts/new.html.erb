@@ -1,17 +1,8 @@
-<%= form_tag "/", method: "post", multipart: true do  %>
+<%= form_tag "/arts", method: "post", multipart: true do  %>
 <div>
-      Name: <input type="text" name="name">
+      Name: <input type="text" name="form_photo_file_name">
+      Image: <input type="file" name="form_photo_url">
+      <input type="submit" value="submit">
 </div>
-    <div>
 <% end %>
-
-Image: <input type="file" name="photo">
- </div>
-    <input type="submit" value="Upload Photo!">
-<% @users.each do |user| %>
-  <% if user.arts %>
-    <% user.arts.each do |image| %>
-      <img src="<%= image.photo_url(:medium) %>" alt="">
-    <% end %>
-  <% end %>
-<% end %>
+ 

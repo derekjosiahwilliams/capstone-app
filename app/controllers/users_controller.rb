@@ -1,10 +1,10 @@
 class UsersController < ApplicationController
   def home
+    @users = User.all
     render "home.html.erb"
   end
 
   def new
-    @users = User.all
     render "new.html.erb"
   end
 
