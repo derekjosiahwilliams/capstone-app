@@ -10,11 +10,18 @@ class UsersController < ApplicationController
 
   def create
     users = User.new(
-      email: params[:email],
       username: params[:username],
+      email: params[:email],
+      password: params[:password],
+      password_confirmation: params[:password_confirmation]
     )
-
-    users.save
-    redirect_to "/"
+    if users.save
+      session[:users_id] = users.id
+      flash[:success] = 'Successfully created account!'
+      redirect_to '/'
+    else
+      flash[:warning] = 'Invalid email or password!'
+      redirect_to '/signup'
+    end
   end
 end

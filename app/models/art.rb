@@ -1,6 +1,6 @@
 class Art < ApplicationRecord
-  has_attached_file :image, styles: {large: "600x600>", medium: "300x300>", thumb: "150x150#"}
-  validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
+  has_attached_file :photo, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
+  validates_attachment_content_type :photo, content_type: /\Aimage\/.*\z/
 
   belongs_to :user
 end

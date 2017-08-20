@@ -1,0 +1,11 @@
+<%= form_tag "/", method: "post", multipart: true do  %>
+<div>
+      Name: <input type="text" name="name">
+    </div>
+    <div>
+<% end %>
+
+Image: <input type="file" name="photo">
+ </div>
+    <input type="submit" value="Upload Photo!">
+<img src="<%= users_path(:medium) %>" alt="">

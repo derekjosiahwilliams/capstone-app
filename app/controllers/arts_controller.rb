@@ -1,5 +1,9 @@
 class ArtsController < ApplicationController
 
+  def upload
+    render "new.html.erb"
+  end
+
   def create
     @art = Art.create( user_params )
   end
