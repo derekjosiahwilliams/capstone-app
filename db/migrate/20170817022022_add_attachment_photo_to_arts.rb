@@ -9,3 +9,4 @@ class AddAttachmentPhotoToArts < ActiveRecord::Migration[5.1]
     remove_attachment :arts, :photo
   end
 end
+
