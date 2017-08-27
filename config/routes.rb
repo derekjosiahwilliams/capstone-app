@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get "/" => "users#home"
 
   get "/arts" => "arts#upload"
+  get "/arts/draw" => "arts#draw"
   post "/arts" => "arts#create"
 
   get "/signup" => "users#new"

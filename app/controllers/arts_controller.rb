@@ -1,5 +1,9 @@
 class ArtsController < ApplicationController
 
+  def draw
+    render "draw.html.erb"
+  end
+
   def upload
     @users = User.all
     render "new.html.erb"
