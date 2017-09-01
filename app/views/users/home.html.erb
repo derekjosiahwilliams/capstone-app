@@ -1,18 +1,21 @@
 <div>
-  <h1>Welcome Home!! Heres your art work!</h1>
+  <div class="container">
+    <h1>Welcome Home!! Heres your art work!</h1>
 
-  <a href="/login">Log in</a> --- <a href="/signup">Sign up</a> --- <a href="/logout"> Logout</a>
-  <br>
-  <a href="/arts">Select New Picture To Search</a>
+    <a href="/login">Log in</a> --- <a href="/signup">Sign up</a> --- <a href="/logout"> Logout</a>
+    <br>
+    <a href="/arts">Select New Picture To Search</a>
 
-  <a href="/arts/draw">Draw Your Search</a>
+    <a href="/arts/draw">Draw Your Search</a>
 
   <h1> TESTING USER.ARTS</h1>
-  <% @users.each do |user| %>
-    <% if user.arts %>
-      <% user.arts.each do |image| %>
-        <img src="<%= image.photo.url(:medium) %>" alt="">
+   <div class="row">
+     <% @users.each do |user| %>
+      <% if user.arts %>
+        <% user.arts.each do |image| %>
+          <img src="<%= image.photo.url(:medium) %>" alt="">
+        <% end %>
       <% end %>
     <% end %>
-  <% end %>
-</div> 
+  </div>
+</div>

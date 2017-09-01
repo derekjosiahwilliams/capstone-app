@@ -16,23 +16,30 @@
   </head>
 
   <body>
-  <nav class="teal" role="navigation">
+  <nav class="purple" role="navigation">
     <div class="nav-wrapper container">
       <a id="logo-container" href="/" class="brand-logo white-text">Home</a>
       <ul class="right hide-on-med-and-down">
+        <if current_user !=nil>
         <li><a href="/arts/draw" class="white-text">Draw a search</a></li>
-      </ul>
+      <!-- Dropdown Trigger -->
+  <a class='dropdown-button btn'  style=" background-color: #9C27B0;" id="drop" href='#' data-activates='dropdown1' >Drop Me!</a>
 
-      <ul id="nav-mobile" class="side-nav">
-        <li><a href="#">Navbar Link</a></li>
-      </ul>
+  <!-- Dropdown Structure -->
+  <ul id='dropdown1' style="margin-left: 100px;" class='dropdown-content'>
+    <li><a href="/login">Login</a></li>
+    <li><a href="/logout">Logout</a></li>
+    <li class="divider"></li>
+    <li><a href="/signup">Sign Up</a></li>
+  </ul>
+
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
   </nav>
 
   <%= yield %>
 
-  <footer class="page-footer teal">
+  <footer class="page-footer purple">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
