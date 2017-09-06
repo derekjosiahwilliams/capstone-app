@@ -163,6 +163,7 @@ function checkQuickDraw(){
 
 // Parse Quickdraw Google AI API Response
 function parseResponse(res){
+  console.log('parseResponse');
   // Convert Response String to JSON
   var res_j = JSON.parse(res);
   // Extract Guess Score String from Response and Convert to JSON
@@ -248,6 +249,8 @@ function plotScores_Highcharts() {
   var p_o = getData_Highcharts();
   // Set Plot Title w/ Best Guess+Score 
   var p_title = 'BEST GUESS: ' + scores[0][0] + ' (' + scores[0][1] + ')';
+  console.log('best guess', scores[0][0]);
+  document.querySelector("#google-link").href = "https://www.google.com/search?q=" + scores[0][0];
 
   // Configure Highcharts Plot
   chart = Highcharts.chart('plot', {

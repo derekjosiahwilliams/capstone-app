@@ -14,15 +14,16 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
+<div class="container">
   <body>
   <nav class="purple" role="navigation">
     <div class="nav-wrapper container">
       <a id="logo-container" href="/" class="brand-logo white-text">Home</a>
       <ul class="right hide-on-med-and-down">
+        <li><a href="/arts" class="white-text">Pick a Pic</a></li>
         <li><a href="/arts/draw" class="white-text">Draw a search</a></li>
       <!-- Dropdown Trigger -->
-  <a class='dropdown-button btn'  style=" background-color: #9C27B0;" id="drop" href='#' data-activates='dropdown1' >Drop Me!</a>
+  <a class='dropdown-button btn'  style=" background-color: #9C27B0;" id="drop" href='#' data-activates='dropdown1' >Account</a>
 
   <!-- Dropdown Structure -->
   <ul id='dropdown1' style="margin-left: 100px;" class='dropdown-content'>
@@ -70,6 +71,6 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="/js/materialize.js"></script>
   <script src="/js/init.js"></script>
-
+  </div>
   </body>
 </html>
