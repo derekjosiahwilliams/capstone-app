@@ -9,6 +9,17 @@ html, body {
   border: 0;
 }
 
+body
+
+ .well {
+  width: 350px;
+  height: 575px;
+ }
+
+ .well img {
+  width: 76.2%;
+ }
+
 body {
   font: 20px sans-serif;
   /*overflow: hidden;*/
