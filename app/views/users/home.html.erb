@@ -1,20 +1,17 @@
-  <div class="container">
-<h1>Welcome Home!! Heres some art work!</h1>
-    
-
-     <div class="row">
-      <% @users.each do |user| %>
-      <div class="col s6">
-        <div class="well">
-          <% if user.arts %>
-            <% user.arts.each do |image| %>
-            <a class="btn" onclick="Materialize.toast('Removed', 4000)">Remove</a>
-              <a class="btn" href="/arts/<%= image.id %>" >Search</a>
-              <img src="<%= image.photo.url(:medium) %>" id="pic" alt="" style="width: 100%">
-            <% end %>
+<div class="container">
+  <h1>Welcome Home!! Heres some art work!</h1>
+  <div class="row">
+    <% @users.each do |user| %>
+        <% if user.arts %>
+          <% user.arts.each do |image| %>
+            <div class="col s4">
+              <div class="well">
+                <a class="btn" style=" background-color: #9C27B0;" href="/arts/<%= image.id %>" >Search</a>
+                <img src="<%= image.photo.url(:medium) %>" id="pic" alt="" style="width: 100%">
+              </div>
+            </div>
           <% end %>
-        </div>
-      </div>
-      <% end %>
-    </div>
+        <% end %>
+    <% end %>
   </div>
+</div>

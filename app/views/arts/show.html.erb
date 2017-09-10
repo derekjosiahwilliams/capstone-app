@@ -1,0 +1,8 @@
+<h1>Heres what we got</h1>
+
+ <img src="<%= @image %>" id="pic" alt="" style="width: 30%"> 
+<% @tags.each do |word| %>
+  <a href="https://www.google.com/search?q=<%= word %>" target="_blank" class="thick"><%= word %></a>
+
+ 
+<% end %>
