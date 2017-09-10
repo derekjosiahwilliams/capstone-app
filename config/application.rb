@@ -15,4 +15,13 @@ module CpastoneApp
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
   end
+
+  ClarifaiRuby.configure do |config|
+    config.base_url       = "https://api.clarifai.com"
+    config.version_path   = "/v1"
+    config.client_id      = "<CLIENT_ID>"
+    config.client_secret  = "<CLIENT_SECRET>"
+  end
+
+
 end

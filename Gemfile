@@ -5,6 +5,9 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+# Figaro gem that allows you to store API key information more easily than using a .env file
+gem 'figaro'
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.2'
@@ -21,7 +24,7 @@ gem 'uglifier', '>= 1.3.0'
 
 gem 'image_suckr'
 gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
-
+gem 'clarifai_ruby'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
