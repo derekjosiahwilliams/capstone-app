@@ -24,5 +24,10 @@ class UsersController < ApplicationController
       flash[:warning] = 'Invalid email or password!'
       redirect_to '/signup'
     end
+
+    def destroy
+      @users = User.find_by(id: params[:id])
+      @users.destroy
+    end
   end
 end

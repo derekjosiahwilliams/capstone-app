@@ -11,13 +11,11 @@ html, body {
 
 body
 
- .well {
-  width: 350px;
-  height: 575px;
- }
-
  .well img {
-  width: 100%;
+  margin: auto;
+  vertical-align: center;
+    border: 3px solid purple;
+    padding: 10px;;
  }
 
 body {

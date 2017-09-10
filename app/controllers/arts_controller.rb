@@ -4,6 +4,11 @@ class ArtsController < ApplicationController
     render "draw.html.erb"
   end
 
+  def show
+    @users = User.find_by(id: params[:id])
+    render "show.json.jbuilder"
+  end
+
   def upload
     @users = User.all
     render "new.html.erb"
