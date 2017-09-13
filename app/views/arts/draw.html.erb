@@ -1,9 +1,19 @@
-<a id="google-link" href="#" target="_blank">search</a>
+<head>
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+  integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw"
+  crossorigin="anonymous">
+</head>
+
+<script src="/js/drawing.js">
+  document.getElementById("google-link").innerHTML = "Search:" + " " + plotScores_Highcharts();
+</script>
+<a id="google-link" href="#" target="_blank">Search</a>
 <link rel="stylesheet" href="css/w3.css">
   <link rel="stylesheet" href="css/style.css">
  <button class="w3-btn w3-ripple w3-blue" id="btnClear" onclick="clearDrawing()">clear</button>
   <div id="wrapper">
-    <canvas id="canvas" resize></canvas>
+    <canvas id="canvas" class="animated swing" resize></canvas>
     <br>
     <div id="plot"></div>
   </div>

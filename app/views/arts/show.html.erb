@@ -1,6 +1,14 @@
-<h1>Heres what we got</h1>
+<head>
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+  integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw"
+  crossorigin="anonymous">
+</head>
 
- <img src="<%= @image %>" id="pic" alt="" style="width: 30%"> 
+
+<h1>Heres what we got</h1> 
+
+ <img src="<%= @image %>" id="pic" alt="" class="animated rollIn" style="width: 30%"> 
 <% @tags.each do |word| %>
   <a href="https://www.google.com/search?q=<%= word %>" target="_blank" class="thick"><%= word %></a>
 

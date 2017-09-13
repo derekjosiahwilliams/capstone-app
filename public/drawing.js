@@ -114,7 +114,7 @@ function checkQuickDraw(){
   var c_dims = getCanvasDimensions();
 
   // Set Base URL for Quickdraw Google AI API
-  var url = 'https://inputtools.google.com/request?ime=handwriting&app=quickdraw&dbg=1&cs=1&oe=UTF-8'
+  var url = 'https://inputtools.google.com/request?ime=handwriting&app=quickdraw&dbg=1&cs=1&oe=UTF-8';
   
   // Set HTTP Headers
   var headers = {
@@ -250,8 +250,10 @@ function plotScores_Highcharts() {
   // Set Plot Title w/ Best Guess+Score 
   var p_title = 'BEST GUESS: ' + scores[0][0] + ' (' + scores[0][1] + ')';
   console.log('best guess', scores[0][0]);
+  var words = scores[0][0];
   document.querySelector("#google-link").href = "https://www.google.com/search?q=" + scores[0][0];
-
+  document.querySelector("#google-link").innerHTML = "https://www.google.com/search?q=" + scores[0][0];
+  console.log(words);
   // Configure Highcharts Plot
   chart = Highcharts.chart('plot', {
     chart: {
@@ -300,6 +302,7 @@ function plotScores_Highcharts() {
     },
     series: p_o.p_data
   });
+  return words;
 };
 
 // Create and Fill Array

@@ -20,8 +20,9 @@ body
   margin: auto;
   vertical-align: center;
     border: 3px solid purple;
+    background: url(http://tharringtonsmith.com/wp-content/uploads/2014/08/blur-background12.jpg);
     height: 200px;
-    padding: 10px;;
+    padding: 10px;
  }
 
 body {
@@ -55,7 +56,6 @@ body > button {
 
 #canvas,
 #plot {
-    display: inline-block;
     vertical-align: top;
 }
 #canvas {
