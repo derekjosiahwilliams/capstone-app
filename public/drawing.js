@@ -252,7 +252,7 @@ function plotScores_Highcharts() {
   console.log('best guess', scores[0][0]);
   var words = scores[0][0];
   document.querySelector("#google-link").href = "https://www.google.com/search?q=" + scores[0][0];
-  document.querySelector("#google-link").innerHTML = "https://www.google.com/search?q=" + scores[0][0];
+  document.querySelector("#google-link").innerHTML = "Search" + " " + scores[0][0];
   console.log(words);
   // Configure Highcharts Plot
   chart = Highcharts.chart('plot', {
